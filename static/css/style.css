@@ -1,0 +1,31 @@
+@font-face {
+    font-family: Misans-Medium;
+    src: url("../font/MiSans-Medium.ttf");
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    font-family: Misans-Medium;
+    background-image: url("../images/backgroud.png");
+    background-color: pink;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.content p {
+    font-size: 160%;
+}
+
+.timer {
+    font-size: 175%;
+}
+
+.timer b {
+    color: red;
+}
