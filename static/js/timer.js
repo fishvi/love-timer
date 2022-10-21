@@ -1,6 +1,6 @@
 "use strict";
 
-const startTime = new Date("2022-08-03 11:32:00");
+const startTime = new Date("2022-10-22 21:00:00");
 timer();
 setInterval(timer, 1000);
 
