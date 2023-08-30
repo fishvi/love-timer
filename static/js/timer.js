@@ -7,6 +7,10 @@ setInterval(timer, 1000);
 function timer() {
     var totalTime = new Date() - startTime;
 
+    var years = Math.floor(totalTime / 1000 / 60 / 60 / 24 / 365);
+
+    var days = Math.floor(totalTime / 1000 / 60 / 60 / 24 % 365);
+
     var hours = Math.floor(totalTime / 1000 / 60 / 60 % 24);
     if (hours < 10) {
         hours = "0" + hours;
@@ -22,7 +26,8 @@ function timer() {
         seconds = "0" + seconds;
     }
 
-    document.getElementById('days').innerHTML = Math.floor(totalTime / 1000 / 60 / 60 / 24);
+    document.getElementById('years').innerHTML = years;
+    document.getElementById('days').innerHTML = days;
     document.getElementById('hours').innerHTML = hours;
     document.getElementById('minutes').innerHTML = minutes;
     document.getElementById('seconds').innerHTML = seconds;
