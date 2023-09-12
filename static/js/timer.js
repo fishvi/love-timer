@@ -5,30 +5,30 @@ timer();
 setInterval(timer, 1000);
 
 function timer() {
-    var totalTime = new Date() - startTime;
+    var totalSeconds = (new Date() - startTime) / 1000;
 
-    var years = Math.floor(totalTime / 1000 / 60 / 60 / 24 / 365);
+    var years = Math.floor(totalSeconds / 60 / 60 / 24 / 365);
 
-    var days = Math.floor(totalTime / 1000 / 60 / 60 / 24 % 365);
+    var days = Math.floor(totalSeconds / 60 / 60 / 24 % 365);
 
-    var hours = Math.floor(totalTime / 1000 / 60 / 60 % 24);
+    var hours = Math.floor(totalSeconds / 60 / 60 % 24);
     if (hours < 10) {
         hours = "0" + hours;
     }
 
-    var minutes = Math.floor(totalTime / 1000 / 60 % 60);
+    var minutes = Math.floor(totalSeconds / 60 % 60);
     if (minutes < 10) {
         minutes = "0" + minutes;
     }
 
-    var seconds = Math.floor(totalTime / 1000 % 60);
+    var seconds = Math.floor(totalSeconds % 60);
     if (seconds < 10) {
         seconds = "0" + seconds;
     }
 
-    document.getElementById('years').innerHTML = years;
-    document.getElementById('days').innerHTML = days;
-    document.getElementById('hours').innerHTML = hours;
-    document.getElementById('minutes').innerHTML = minutes;
-    document.getElementById('seconds').innerHTML = seconds;
+    document.getElementById("years").innerHTML = years;
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
 }
